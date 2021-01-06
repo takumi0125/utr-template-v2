@@ -232,7 +232,7 @@ yarn build:prd
 完全ではないですが、HMRも対応しています。<br>
 `dev/config.js` の hmr を true に設定すると、<br>
 .vue の拡張子のファイルが更新されると、ホットリロードされます。<br>
-Reactで使用したい場合は、コード内で然るべき対応を取ります。 (module.hot)
+Reactで使用したい場合は、コード内で然るべき対応を取ります。 (import.meta.webpackHot)
 
 ただし、その他の .js や .ts ファイルが更新されてもリロードされないので、<br>
 逐次リロードしてください。
