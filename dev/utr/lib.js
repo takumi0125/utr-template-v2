@@ -196,8 +196,8 @@ const webpackCallback = (error, stats, logTaskNames = [ 'js' ], reload = false)=
 
   if(stats.hasErrors()) {
     // compilation errors
-    for (const error of info.errors) {
-      utr.error(logTaskNames, error.stack);
+    for (const err of info.errors) {
+      utr.error(logTaskNames, `${err.file}\n ${err.message}`);
     }
   }
 

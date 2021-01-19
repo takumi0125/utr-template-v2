@@ -67,8 +67,9 @@ const config = {
   resolvedPublishDir: path.resolve(PUBLISH_DIR),
 
   // assetsディレクトリ
-  assetsDirName: ASSETS_DIR_NAME,
-  resolvedAssetsDir: path.resolve(ASSETS_DIR_NAME),
+  assetDirName: 'ASSETS_DIR_NAME',
+  assetDir: `${SRC_DIR}/${ASSETS_DIR_NAME}`,
+  resolvedAssetsDir: path.resolve(`${SRC_DIR}/${ASSETS_DIR_NAME}`),
 
   // タスクから除外するためのプレフィックス
   excrusionPrefix: EXCRUSION_PREFIX,
@@ -173,8 +174,8 @@ const config = {
   // webpack.config.resolve.alias
   webpackResolveAlias: {
     // vue: 'vue/dist/vue.esm.js',
-    '@': `${ASSETS_DIR_NAME}/js/`,
-    '~': `${ASSETS_DIR_NAME}/js/`,
+    '@': path.resolve(`${SRC_DIR}/${ASSETS_DIR_NAME}/js`),
+    '~': path.resolve(`${SRC_DIR}/${ASSETS_DIR_NAME}/js`),
   }
 };
 

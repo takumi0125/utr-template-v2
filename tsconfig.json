@@ -11,6 +11,22 @@
     "strict": true,
     "allowJs": true,
     "esModuleInterop": true,
-    "isolatedModules": false
-  }
+    "isolatedModules": false,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": [
+        "./src/assets/js/*"
+      ],
+      "@/*": [
+        "./src/assets/js/*"
+      ]
+    },
+    "types": [
+      "@types/node",
+    ]
+  },
+  "exclude": [
+    "node_modules",
+    "htdocs"
+  ]
 }
