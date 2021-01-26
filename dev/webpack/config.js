@@ -42,8 +42,6 @@ module.exports = (entry)=> {
       publicPath: '/'
     },
 
-    devtool: isDev? 'source-map': 'none',
-
     devServer: {
       hot: isDev && config.hmr
     },
@@ -154,6 +152,9 @@ module.exports = (entry)=> {
     optimization: {
     }
   };
+
+  // source-map
+  if(isDev) webpackConfig.devtool = 'source-map'
 
   // HMR
   if(mode === 'development' && config.hmr) {
