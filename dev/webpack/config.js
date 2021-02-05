@@ -51,6 +51,8 @@ module.exports = (entry)=> {
       alias: config.webpackResolveAlias || {}
     },
 
+    target: [ 'web', 'es5' ],
+
     module: {
       rules: [
         // js/jsx
