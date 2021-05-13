@@ -255,7 +255,7 @@ const tasks = {
 
         // file output
         const fsPromises = [
-          fs.outputFile(dist, postcssResult.css.css.toString())
+          fs.outputFile(dist, postcssResult.css.toString())
           .then(()=> {
             distFilePaths.push(dist);
             utr.log('sass', 'build', dist)
